@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#080A0D">
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview" android:layout_width="match_parent"
+        android:layout_height="match_parent" app:scaleType="fillCenter"
+        app:implementationMode="performance"/>
+    <com.facetrack.camera.TrackingOverlay
+        android:id="@+id/overlay" android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp"
+        android:background="#88080A0D">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="FaceTrack" android:textColor="#FFFFFF" android:textSize="25sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Starting camera…" android:textColor="#B8F36B" android:textSize="14sp" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:padding="24dp" android:gravity="center" android:background="#CC080A0D">
+        <Switch android:id="@+id/trackingSwitch" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Face tracking indicator"
+            android:textColor="#FFFFFF" android:checked="true"/>
+        <TextView android:id="@+id/timer" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="READY" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_marginTop="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/recordButton"
+            android:layout_width="match_parent" android:layout_height="58dp"
+            android:layout_marginTop="12dp" android:text="●  Start recording"
+            android:textColor="#080A0D" app:backgroundTint="#B8F36B" app:cornerRadius="28dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Prototype note: recording uses CameraX's native video pipeline. Face tracking currently reports/visualizes detection; the encoded video is not dynamically reframed yet."
+            android:textColor="#C3C7CC" android:textSize="11sp" android:gravity="center"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</FrameLayout>
