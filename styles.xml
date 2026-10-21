@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.FaceTrack" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:statusBarColor">#080A0D</item>
+        <item name="android:navigationBarColor">#080A0D</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorPrimary">#B8F36B</item>
+        <item name="colorSecondary">#B8F36B</item>
+    </style>
+</resources>

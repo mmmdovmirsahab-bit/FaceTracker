@@ -1,0 +1,6 @@
+FaceTrack source archive status
+- Project source and GitHub Actions workflow generated.
+- No APK has been built or tested in this environment.
+- Current code implements front camera, ML Kit face detection indicator, and CameraX recording.
+- It does NOT yet dynamically reframe the encoded video. See README.md.
+- The workflow uses the runner's Gradle installation; wrapper launcher files are not included.
